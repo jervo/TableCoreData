@@ -96,7 +96,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="SaveInfo:" destination="y0H-ar-Fkn" eventType="touchUpInside" id="KFi-aJ-drn"/>
+                                    <action selector="SaveInfo:" destination="y0H-ar-Fkn" eventType="touchUpInside" id="1rP-0H-Cvg"/>
                                 </connections>
                             </button>
                         </subviews>

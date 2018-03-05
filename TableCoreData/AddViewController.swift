@@ -19,8 +19,24 @@ class AddViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
   
-  @IBAction func SaveInfo(_ sender: Any) {
+  @IBAction func SaveInfo(_ sender: UIButton) {
     print("Save data to CoreData")
+    
+    // Link context to persistentContainer
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    // link personObj to entity Person
+    let personObj = Person(context: context)
+    
+    // Update atrributes with entity
+    personObj.firstName = inputName.text
+    personObj.favorite = inputFavorite.text
+    
+    // Save to Context back to CoreData
+    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    
+    // Pop this view controller
+    let _ = navigationController?.popViewController(animated: true)
   }
   
     override func didReceiveMemoryWarning() {
