@@ -56,6 +56,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="People" id="iVY-Mc-q98">
                         <barButtonItem key="backBarButtonItem" title="Return" id="ce3-Jh-rYq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="83U-HO-0P6"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
