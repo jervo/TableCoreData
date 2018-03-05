@@ -55,13 +55,62 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="People" id="iVY-Mc-q98">
-                        <barButtonItem key="backBarButtonItem" title="Return" id="ce3-Jh-rYq"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="83U-HO-0P6"/>
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="ce3-Jh-rYq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="83U-HO-0P6">
+                            <connections>
+                                <segue destination="y0H-ar-Fkn" kind="show" id="qEJ-1S-f0w"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="513.75" y="114.08450704225352"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="58f-rl-JZb">
+            <objects>
+                <viewController title="Add" id="y0H-ar-Fkn" customClass="AddViewController" customModule="TableCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u7c-58-fnm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qKt-Za-3lx">
+                                <rect key="frame" x="16" y="130" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Present" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTO-jp-ifK">
+                                <rect key="frame" x="16" y="194" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjb-4Q-Tra">
+                                <rect key="frame" x="118" y="526" width="85" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="SaveInfo:" destination="y0H-ar-Fkn" eventType="touchUpInside" id="KFi-aJ-drn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="NkU-Tr-ytT"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputFavorite" destination="PTO-jp-ifK" id="k3t-N3-ntW"/>
+                        <outlet property="inputName" destination="qKt-Za-3lx" id="nPa-Lj-cd8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Rh-vb-vpw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.25" y="111.97183098591549"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wcz-Ay-Oyy">
