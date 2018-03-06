@@ -53,6 +53,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       print("People Entity Fetching Failed")
     }
   }
+  
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      print("Delete row.. " + String(indexPath.row))
+      // extract person from array
+      let onePerson = peopleArray[indexPath.row]
+      // Delete that person from context
+      context.delete(onePerson)
+      // Save context back to CoreData
+      (UIApplication.shared.delegate as! AppDelegate).saveContext()
+      // get fresh data
+      getData()
+      // Reload table view
+      tableView.reloadData()
+    }
+  }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
