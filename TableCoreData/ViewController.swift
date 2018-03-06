@@ -69,12 +69,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       tableView.reloadData()
     }
   }
+  
+  var selRowNum:Int = 0
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("Row selected " + indexPath.row.description)
+    
+    selRowNum = indexPath.row
+    self.performSegue(withIdentifier: "showDetail", sender: nil)
+    
+  }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any? ) {
+    if segue.identifier == "showDetail" {
+      let detailObj = segue.destination as! DetailViewController
+      detailObj.transRowNum = selRowNum
+    }
+  }
 }
 
 

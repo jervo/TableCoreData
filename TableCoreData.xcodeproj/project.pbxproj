@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A74C0D58204E306500926356 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74C0D57204E306500926356 /* DetailViewController.swift */; };
 		A7C9241C204DDDA300FF1455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9241B204DDDA300FF1455 /* AppDelegate.swift */; };
 		A7C9241E204DDDA300FF1455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9241D204DDDA300FF1455 /* ViewController.swift */; };
 		A7C92421204DDDA300FF1455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C9241F204DDDA300FF1455 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A74C0D57204E306500926356 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A7C92418204DDDA300FF1455 /* TableCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C9241B204DDDA300FF1455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7C9241D204DDDA300FF1455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				A7C9241B204DDDA300FF1455 /* AppDelegate.swift */,
 				A7C9241D204DDDA300FF1455 /* ViewController.swift */,
 				A7C9241F204DDDA300FF1455 /* Main.storyboard */,
+				A74C0D57204E306500926356 /* DetailViewController.swift */,
 				A7D586AE204DE63200C8C8CD /* AddViewController.swift */,
 				A7C92425204DDDA300FF1455 /* Assets.xcassets */,
 				A7C92427204DDDA300FF1455 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				A7C92424204DDDA300FF1455 /* TableCoreData.xcdatamodeld in Sources */,
 				A7C9241E204DDDA300FF1455 /* ViewController.swift in Sources */,
+				A74C0D58204E306500926356 /* DetailViewController.swift in Sources */,
 				A7D586AF204DE63200C8C8CD /* AddViewController.swift in Sources */,
 				A7C9241C204DDDA300FF1455 /* AppDelegate.swift in Sources */,
 			);

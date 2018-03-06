@@ -59,20 +59,56 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="People" id="iVY-Mc-q98">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="ce3-Jh-rYq"/>
+                        <barButtonItem key="backBarButtonItem" title="Return" id="ce3-Jh-rYq"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="83U-HO-0P6">
                             <connections>
-                                <segue destination="y0H-ar-Fkn" kind="show" id="qEJ-1S-f0w"/>
+                                <segue destination="y0H-ar-Fkn" kind="show" identifier="" id="dl4-Bt-38X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="hLe-Nc-z1R" id="PXO-Ig-dPl"/>
+                        <segue destination="Xbj-fz-b6b" kind="show" identifier="showDetail" id="bhN-yK-GgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="513.75" y="114.08450704225352"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="SVj-Aj-gFY">
+            <objects>
+                <viewController title="Detail" id="Xbj-fz-b6b" customClass="DetailViewController" customModule="TableCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yp8-VD-d1f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuQ-QG-uNA">
+                                <rect key="frame" x="16" y="146" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPZ-Hp-IyT">
+                                <rect key="frame" x="16" y="194" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="6uW-Md-OmV"/>
+                    </view>
+                    <connections>
+                        <outlet property="detFavorite" destination="BPZ-Hp-IyT" id="aAO-Oe-hD8"/>
+                        <outlet property="detName" destination="wuQ-QG-uNA" id="8uR-Wm-1zC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JhG-YO-R3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513.75" y="853.52112676056333"/>
         </scene>
         <!--Add-->
         <scene sceneID="58f-rl-JZb">
