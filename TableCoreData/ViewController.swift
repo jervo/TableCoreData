@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -16,6 +16,21 @@ class ViewController: UIViewController {
   let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
   
   var peopleArray: [People] = []
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return peopleArray.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let myCell = tableView.dequeueReusableCell(withIdentifier: "proCell", for: indexPath)
+    
+    let onePerson = peopleArray[indexPath.row]
+    
+    myCell.textLabel?.text = onePerson.firstName
+    myCell.detailTextLabel?.text = onePerson.favorite
+    
+    return myCell
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -46,23 +61,4 @@ class ViewController: UIViewController {
   
 }
 
-// EXTENSIONS
-
-extension ViewController: UITableViewDataSource {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return peopleArray.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let myCell = tableView.dequeueReusableCell(withIdentifier: "proCell", for: indexPath)
-    
-    let onePerson = peopleArray[indexPath.row]
-    
-    myCell.textLabel?.text = onePerson.firstName
-    myCell.detailTextLabel?.text = onePerson.favorite
-    
-    return myCell
-  }
-}
 

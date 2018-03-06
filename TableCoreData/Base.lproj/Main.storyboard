@@ -51,6 +51,7 @@
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="cuV-rB-VGb"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qVD-TY-oCp"/>
                                 </connections>
                             </tableView>
                         </subviews>
