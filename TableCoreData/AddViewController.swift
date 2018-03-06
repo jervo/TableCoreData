@@ -25,12 +25,12 @@ class AddViewController: UIViewController {
     // Link context to persistentContainer
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    // link personObj to entity Person
-    let personObj = Person(context: context)
+    // link peopleObj to entity People
+    let peopleObj = People(context: context)
     
     // Update atrributes with entity
-    personObj.firstName = inputName.text
-    personObj.favorite = inputFavorite.text
+    peopleObj.firstName = inputName.text
+    peopleObj.favorite = inputFavorite.text
     
     // Save to Context back to CoreData
     (UIApplication.shared.delegate as! AppDelegate).saveContext()
